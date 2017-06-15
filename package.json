@@ -1,0 +1,64 @@
+{
+  "name": "easywebpack-weex",
+  "version": "0.1.0",
+  "description": "weex webpack building solution for easywebpack",
+  "keywords": [
+    "webpack",
+    "easywebpack",
+    "vue",
+    "weex"
+  ],
+  "dependencies": {
+    "easywebpack": "^0.4.0",
+    "vue": "^2.3.4",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^11.3.4",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.3.2",
+    "weex-loader": "^0.4.4",
+    "weex-style-loader": "0.0.6",
+    "weex-vue-loader": "^0.2.12",
+    "weex-vue-render": "^0.11.49"
+  },
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "cross-env": "^5.0.1",
+    "eslint": "^3.18.0",
+    "eslint-config-eslint": "^4.0.0",
+    "mocha": "^3.4.2"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "start" : "cross-env NODE_ENV=development node test/build",
+    "build": "cross-env NODE_ENV=production node test/build",
+    "build-dev": "cross-env NODE_ENV=development node test/build",
+    "build-weex": "BUILD_ENV=weex npm run build",
+    "build-web": "BUILD_ENV=web npm run build",
+    "build-weex-dev": "BUILD_ENV=weex npm run build-dev",
+    "build-web-dev": "BUILD_ENV=web npm run build-dev",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "test": "mocha test",
+    "ci": "npm run lint && npm run cov"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "tool"
+  ],
+  "ci": {
+    "version": "6, 7, 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hubcarl/easywebpack-weex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hubcarl/easywebpack-weex/issues"
+  },
+  "homepage": "https://github.com/hubcarl/easywebpack-weex#readme",
+  "author": "hubcarl@126.com",
+  "license": "MIT"
+}
