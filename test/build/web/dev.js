@@ -5,6 +5,7 @@ const WebpackBaseBuilder = require('../base');
 class WeexWebBuilder extends WebpackBaseBuilder(WebpackWebBuilder) {
   constructor(config) {
     super(config);
+    this.setPrefix('weex/web');
     this.setEntry('vendor', [path.join(this.config.baseDir, 'test/web/framework/weex/web.js')]);
   }
 }

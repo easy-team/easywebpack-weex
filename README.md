@@ -59,7 +59,7 @@ module.exports = WebpackBaseBuilder;
 ```js
 'use strict';
 const WeexWebpack = require('easywebpack-weex');
-const WebpackWeexBuilder = VueWebpack.WebpackWeexBuilder;
+const WebpackWeexBuilder = WeexWebpack.WebpackWeexBuilder;
 const WebpackBaseBuilder = require('../base');
 class WeexBuilder extends WebpackBaseBuilder(WebpackWeexBuilder) {
 }

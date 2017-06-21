@@ -12,12 +12,8 @@ if (BUILD_ENV === 'weex') {
   Array.prototype.push.apply(buildConfig, [weexConfig, webConfig]);
 }
 
-const config = {
-  port: 8881,
-  webpackConfig: buildConfig
-};
 if (BUILD_ENV) {
-  WeexWebpack.build(config);
+  WeexWebpack.build(buildConfig);
 } else {
-  WeexWebpack.server(config);
+  WeexWebpack.server(buildConfig);
 }

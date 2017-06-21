@@ -1,6 +1,6 @@
 {
   "name": "easywebpack-weex",
-  "version": "0.1.1",
+  "version": "0.5.1",
   "description": "weex webpack building solution for easywebpack",
   "keywords": [
     "webpack",
@@ -9,12 +9,13 @@
     "weex"
   ],
   "dependencies": {
-    "easywebpack": "^0.4.0",
+    "easywebpack": "^0.5.1",
     "vue": "^2.3.4",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^11.3.4",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.3.2",
+    "webpack-tool": "0.0.2",
     "weex-loader": "^0.4.4",
     "weex-style-loader": "0.0.6",
     "weex-vue-loader": "^0.2.12",
@@ -31,7 +32,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "start" : "cross-env NODE_ENV=development node test/build",
+    "start": "cross-env NODE_ENV=development node test/build",
     "build": "cross-env NODE_ENV=production node test/build",
     "build-dev": "cross-env NODE_ENV=development node test/build",
     "build-weex": "BUILD_ENV=weex npm run build",

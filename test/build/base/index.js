@@ -13,6 +13,7 @@ const webpackConfig = {
 const WebpackBaseBuilder = WebpackBuilder => class extends WebpackBuilder {
   constructor(config) {
     super(merge(webpackConfig, config));
+    this.setCssExtract(false);
     this.setAlias('app', path.join(this.config.baseDir, 'test/web/framework/vue/app'));
     this.setAlias('framework', path.join(this.config.baseDir, 'test/web/framework'));
   }
