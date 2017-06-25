@@ -84,9 +84,7 @@ module.exports = new WeexWebBuilder().create();
 const WeexWebpack = require('easywebpack-weex');
 const weexConfig = require('./weex');
 const webConffig = require('./web');
-const config = { 
-   webpackConfig: [weexConfig, webConffig]
-};
+const config = [weexConfig, webConffig];
 
 if (process.env.NODE_SERVER) {
   // development mode: webpack building and start webpack hot server

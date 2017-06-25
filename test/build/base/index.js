@@ -7,7 +7,7 @@ const webpackConfig = {
   baseDir,
   build: {
     entry: path.join(baseDir, 'test/web/page'),
-    template: path.join(baseDir, 'test/web/view/layout.html'),
+    template: path.join(baseDir, 'test/web/view/layout.html')
   }
 };
 const WebpackBaseBuilder = WebpackBuilder => class extends WebpackBuilder {

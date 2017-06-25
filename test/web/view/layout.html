@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-  <title>easywebpack-weex</title>
-  <meta name="keywords" :content="keywords">
-  <meta name="description" :content="description">
-  <meta http-equiv="content-type" content="text/html;charset=utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+  <title>weex</title>
+  <meta charset="utf-8">
+  <meta name="weex-viewport" content="750" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no, email=no">
+  <style>
+    html, body {
+      -ms-overflow-style: scrollbar;
+      -webkit-tap-highlight-color: transparent;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
-<body :class="baseClass">
-  <div id="root"><!--vue-ssr-outlet--></div>
+<body>
+<div id="root"></div>
 </body>
 </html>
