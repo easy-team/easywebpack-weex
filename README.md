@@ -35,8 +35,8 @@ $ npm i easywebpack-weex --save
 ```js
 'use strict';
 const path = require('path');
-const VueWebpack = require('easywebpack-weex');
-const merge = VueWebpack.merge;
+const WeexWebpack = require('easywebpack-weex');
+const merge = WeexWebpack.merge;
 const baseDir = path.join(__dirname, '../../../');
 const webpackConfig = {
   baseDir,
