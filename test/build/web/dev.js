@@ -1,12 +1,10 @@
 'use strict';
-const path = require('path');
-const WebpackWebBuilder = require('../../../lib/web');
-const WebpackBaseBuilder = require('../base');
-class WeexWebBuilder extends WebpackBaseBuilder(WebpackWebBuilder) {
+const WebpackWebBaseBuilder = require('./base');
+class WeexWebBuilder extends WebpackWebBaseBuilder {
   constructor(config) {
     super(config);
-    this.setPrefix('weex/web');
-    this.setEntry('vendor', [path.join(this.config.baseDir, 'test/web/framework/weex/web.js')]);
+    this.setEnv('dev');
+    this.setDevMode(9001)
   }
 }
 module.exports = new WeexWebBuilder().create();

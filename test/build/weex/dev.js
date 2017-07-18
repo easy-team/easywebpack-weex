@@ -1,10 +1,9 @@
 'use strict';
-const WebpackWeexBuilder = require('../../../lib/weex');
-const WebpackBaseBuilder = require('../base');
-class WeexBuilder extends WebpackBaseBuilder(WebpackWeexBuilder) {
+const WebpackWeeNativeBaseBuilder = require('./base');
+class WeexBuilder extends WebpackWeeNativeBaseBuilder{
   constructor(config) {
     super(config);
-    this.setPrefix('weex/native');
+    this.setEnv('dev');
   }
 }
 module.exports = new WeexBuilder().create();
