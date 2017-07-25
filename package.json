@@ -1,6 +1,6 @@
 {
   "name": "easywebpack-weex",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "weex webpack building solution for easywebpack",
   "keywords": [
     "webpack",
@@ -9,7 +9,7 @@
     "weex"
   ],
   "dependencies": {
-    "easywebpack": "^0.7.0",
+    "easywebpack": "^0.8.0",
     "vue": "^2.3.4",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^11.3.4",
