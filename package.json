@@ -1,7 +1,7 @@
 {
   "name": "easywebpack-weex",
-  "version": "0.8.2",
-  "description": "weex webpack building solution for easywebpack",
+  "version": "1.0.0",
+  "description": "Weex webpack building solution for easywebpack",
   "keywords": [
     "webpack",
     "easywebpack",
@@ -9,21 +9,21 @@
     "weex"
   ],
   "dependencies": {
-    "easywebpack": "^0.8.0",
-    "vue": "^2.3.4",
+    "easywebpack": "^1.0.8",
+    "vue": "^2.4.2",
     "vue-html-loader": "^1.2.4",
-    "vue-loader": "^11.3.4",
+    "vue-loader": "^13.0.4",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.3.2",
-    "weex-loader": "^0.4.4",
+    "weex-loader": "^0.5.3",
     "weex-style-loader": "0.0.6",
-    "weex-vue-loader": "^0.2.12",
-    "weex-vue-render": "^0.11.49"
+    "weex-vue-loader": "^0.4.2",
+    "weex-vue-render": "^0.12.8"
   },
   "devDependencies": {
     "chai": "^4.0.0",
     "cross-env": "^5.0.1",
-    "eslint": "^3.18.0",
+    "eslint": "^4.6.1",
     "eslint-config-eslint": "^4.0.0",
     "mocha": "^3.4.2"
   },

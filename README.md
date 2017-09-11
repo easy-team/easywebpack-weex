@@ -20,7 +20,8 @@
 [download-image]: https://img.shields.io/npm/dm/easywebpack-weex.svg?style=flat-square
 [download-url]: https://npmjs.org/package/easywebpack-weex
 
-egg webpack building solution for vue
+Webpack(2.x.x) building solution for `Weex` + `Vue`, support `Native`` and `Web` build.
+
 
 ## Install
 
@@ -41,14 +42,14 @@ const baseDir = path.join(__dirname, '../../../');
 const webpackConfig = {
   baseDir,
   build: {
-    entry: path.join(baseDir, 'test/web/page')
+    entry: 'test/web/page'
   }
 };
 const WebpackBaseBuilder = WebpackBuilder => class extends WebpackBuilder {
   constructor(config) {
     super(merge(webpackConfig, config));
-    this.setAlias('app', path.join(this.config.baseDir, 'test/web/framework/vue/app'));
-    this.setAlias('component', path.join(this.config.baseDir, 'test/web/component'));
+    this.setAlias('app', 'test/web/framework/vue/app');
+    this.setAlias('component', 'test/web/component');
   }
 };
 module.exports = WebpackBaseBuilder;
@@ -99,15 +100,15 @@ if (process.env.NODE_SERVER) {
 
 ```js
 {
-    "scripts": {
-        "build": "cross-env NODE_ENV=production node test/build",
-        "build-dev": "cross-env NODE_ENV=development node test/build",
-        "build-weex": "BUILD_ENV=weex npm run build",
-        "build-web": "BUILD_ENV=web npm run build",
-        "build-weex-dev": "BUILD_ENV=weex npm run build-dev",
-        "build-web-dev": "BUILD_ENV=web npm run build-dev",
-        "start" : "cross-env NODE_SERVER=true NODE_ENV=development node test/build"
-     }   
+  "scripts": {
+    "build": "cross-env NODE_ENV=production node test/build",
+    "build-dev": "cross-env NODE_ENV=development node test/build",
+    "build-weex": "BUILD_ENV=weex npm run build",
+    "build-web": "BUILD_ENV=web npm run build",
+    "build-weex-dev": "BUILD_ENV=weex npm run build-dev",
+    "build-web-dev": "BUILD_ENV=web npm run build-dev",
+    "start" : "cross-env NODE_SERVER=true NODE_ENV=development node test/build"
+   }
 }
 ```
 
@@ -120,11 +121,15 @@ npm start
 
 ## Example
 
+- [easywebpack-weex-boilerplate](https://github.com/hubcarl/easywebpack-weex-boilerplate) Weex构建项目骨架
+
 ![webpack-weex-compile](https://github.com/hubcarl/easywebpack-weex/blob/master/doc/images/webpack-weex-compile.png)
 
 ![webpack-weex-debug](https://github.com/hubcarl/easywebpack-weex/blob/master/doc/images/webpack-weex-debug.png)
 
 see [weex example](test/web) and [weex webpack build config](test/build)  for more detail.
+
+
 
 ## Questions & Suggestions
 
