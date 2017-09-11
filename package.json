@@ -1,6 +1,6 @@
 {
   "name": "easywebpack-weex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Weex webpack building solution for easywebpack",
   "keywords": [
     "webpack",
@@ -31,13 +31,9 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development node test/build",
-    "build": "cross-env NODE_ENV=production node test/build",
-    "build-dev": "cross-env NODE_ENV=development node test/build",
-    "build-weex": "BUILD_ENV=weex npm run build",
-    "build-web": "BUILD_ENV=web npm run build",
-    "build-weex-dev": "BUILD_ENV=weex npm run build-dev",
-    "build-web-dev": "BUILD_ENV=web npm run build-dev",
+    "build": "cross-env node test/build",
+    "start": "cross-env SERVER=true node test/build",
+    "weex": "npm start",
     "lint": "eslint .",
     "fix": "eslint --fix .",
     "test": "mocha test",
