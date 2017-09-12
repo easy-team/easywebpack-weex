@@ -14,9 +14,7 @@ module.exports = {
     framework: 'test/web/framework',
     store: 'test/web/store'
   },
-  create() {
-    if (this.type === 'web') {
-      this.addEntry('vendor', [path.join(this.config.baseDir, 'test/web/framework/weex/web.js')]);
-    }
+  onWeb() {
+    this.addEntry('vendor', [path.join(this.config.baseDir, 'test/web/framework/weex/web.js')]);
   }
 };
