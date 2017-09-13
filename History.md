@@ -1,4 +1,10 @@
 
+3.0.0 / 2017-09-13
+==================
+
+  * feat:support build mode ui view
+  * feat:easywebpack3 for webpack 3
+
 1.0.0 / 2017-09-11
 ==================
 
