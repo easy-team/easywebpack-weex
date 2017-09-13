@@ -16,6 +16,7 @@
     "new-cap": "off",
     "newline-after-var": "off",
     "no-invalid-this": "off",
+    "no-unused-vars": "off",
     "quotes": [
       "error",
       "single"

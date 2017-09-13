@@ -9,12 +9,13 @@
     "weex"
   ],
   "dependencies": {
-    "easywebpack": "^3.0.0",
+    "easywebpack": "^3.1.1",
     "vue": "^2.4.2",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^13.0.4",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.3.2",
+    "webpack-tool": "^3.1.1",
     "weex-loader": "^0.5.3",
     "weex-style-loader": "0.0.6",
     "weex-vue-loader": "^0.4.2",
@@ -31,8 +32,8 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "build": "cross-env node test/build",
-    "start": "cross-env SERVER=true node test/build",
+    "build": "cross-env BUILD_VIEW=true BUILD_ENV=prod node test/build",
+    "start": "cross-env NODE_ENV=development node test/build",
     "weex": "npm start",
     "lint": "eslint .",
     "fix": "eslint --fix .",

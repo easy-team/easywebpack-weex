@@ -1,4 +1,30 @@
 'use strict';
+
+exports.css = {
+  use: []
+};
+
+exports.scss = {
+  use: ['sass-loader']
+};
+
+exports.sass = {
+  use: [{
+    loader: 'sass-loader',
+    options: {
+      indentedSyntax: true
+    }
+  }]
+};
+
+exports.less = {
+  use: ['less-loader']
+};
+
+exports.stylus = {
+  use: ['stylus-loader']
+};
+
 exports.weex = {
   test: /\.vue$/,
   type: 'weex',

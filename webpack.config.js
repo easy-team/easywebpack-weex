@@ -2,6 +2,7 @@
 const path = require('path');
 module.exports = {
   framework: 'weex',
+  env: process.env.BUILD_ENV,
   entry: {
     include: 'test/web/page',
     exclude: ['test/web/page/html'],
