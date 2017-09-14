@@ -20,7 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/easywebpack-weex.svg?style=flat-square
 [download-url]: https://npmjs.org/package/easywebpack-weex
 
-Webpack(2.x.x) building solution for `Weex` + `Vue`, support `Native`` and `Web` build.
+Webpack3 (3.x.x) and Webpack2 (1.x.x) building solution for `Weex` + `Vue`, support `Native`` and `Web` build.
 
 
 ## Install
