@@ -40,10 +40,11 @@ const WeexWebpack = require('easywebpack-weex');
 const merge = WeexWebpack.merge;
 const baseDir = path.join(__dirname, '../../../');
 const webpackConfig = {
-  baseDir,
-  build: {
-    entry: 'test/web/page'
-  }
+  entry: {
+   include: 'page',
+   exclude: ['page/test'],
+   template: 'view/layout.html'
+  } 
 };
 const WebpackBaseBuilder = WebpackBuilder => class extends WebpackBuilder {
   constructor(config) {
