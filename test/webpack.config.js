@@ -15,7 +15,13 @@ module.exports = {
     framework: 'test/web/framework',
     store: 'test/web/store'
   },
+  install: {
+    check: true
+  },
+  plugins: {
+    npm: true
+  },
   onWeb() {
-    this.addEntry('vendor', [path.join(this.config.baseDir, 'test/web/framework/weex/web.js')]);
+    this.addEntry('common', [path.join(this.config.baseDir, 'test/web/framework/weex/web.js')]);
   }
 };

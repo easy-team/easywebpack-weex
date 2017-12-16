@@ -20,18 +20,18 @@
 [download-image]: https://img.shields.io/npm/dm/easywebpack-weex.svg?style=flat-square
 [download-url]: https://npmjs.org/package/easywebpack-weex
 
-Webpack3 (3.x.x) and Webpack2 (1.x.x) building solution for `Weex` + `Vue`, support `Native`` and `Web` build.
+基于 easywebpack 的 Weex Native 和 Weex Web 打包构建解决方案.
 
 
-## Install
+## 安装
 
 ```bash
 $ npm i easywebpack-weex --save
 ```
 
-## Usage
+## 使用
 
-### webpack common config `base.js`
+### 公共配置 `base.js`
 
 ```js
 'use strict';
@@ -56,7 +56,7 @@ const WebpackBaseBuilder = WebpackBuilder => class extends WebpackBuilder {
 module.exports = WebpackBaseBuilder;
 ```
 
-### webpack weex config `weex.js`
+### Weex Native 构建配置 `weex.js`
 
 ```js
 'use strict';
@@ -68,7 +68,7 @@ class WeexBuilder extends WebpackBaseBuilder(WebpackWeexBuilder) {
 module.exports = new WeexBuilder().create();
 ```
 
-### webpack weex web config `web.js`
+### Weex Web 构建配置 `web.js`
 
 ```js
 'use strict';
@@ -80,7 +80,7 @@ class WeexWebBuilder extends WebpackBaseBuilder(WebpackWebBuilder) {
 module.exports = new WeexWebBuilder().create();
 ```
 
-### command run entry file `build.js`
+### 构建入口 `build.js`
 
 ```js
 const WeexWebpack = require('easywebpack-weex');
@@ -97,9 +97,12 @@ if (process.env.NODE_SERVER) {
 }
 ```
 
-### commmand run
+### 命令行运行
+
+- package.json 添加脚本配置
 
 ```js
+// ${app_root}/package.json
 {
   "scripts": {
     "build": "cross-env NODE_ENV=production node test/build",
@@ -113,28 +116,21 @@ if (process.env.NODE_SERVER) {
 }
 ```
 
+- 命令行运行
+
 ```bash
-
 npm start
-
 ```
 
 
-## Example
+## 工程骨架
 
-- [easywebpack-weex-boilerplate](https://github.com/hubcarl/easywebpack-weex-boilerplate) Weex构建项目骨架
+[easywebpack-weex-boilerplate](https://github.com/hubcarl/easywebpack-weex-boilerplate) Weex构建项目骨架
 
 ![webpack-weex-compile](https://github.com/hubcarl/easywebpack-weex/blob/master/doc/images/webpack-weex-compile.png)
 
 ![webpack-weex-debug](https://github.com/hubcarl/easywebpack-weex/blob/master/doc/images/webpack-weex-debug.png)
 
-see [weex example](test/web) and [weex webpack build config](test/build)  for more detail.
-
-
-
-## Questions & Suggestions
-
-Please open an issue [here](https://github.com/hubcarl/easywebpack-weex).
 
 ## License
 
