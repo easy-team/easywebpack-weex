@@ -1,6 +1,6 @@
 {
   "name": "easywebpack-weex",
-  "version": "3.0.1",
+  "version": "3.2.0",
   "description": "Weex webpack building solution for easywebpack",
   "keywords": [
     "webpack",
