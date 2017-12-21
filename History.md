@@ -1,4 +1,12 @@
 
+3.5.0 / 2017-12-21
+==================
+
+  * fix: .vue file extendsion auto match
+  * fix: support cli dll
+  * fix: weex vendor runtime and commonsChunk config.lib
+  * deps: upgrade easywebpack 3.5.x
+
 3.0.1 / 2017-11-29
 ==================
 

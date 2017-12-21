@@ -1,7 +1,7 @@
 {
   "name": "easywebpack-weex",
-  "version": "3.2.0",
-  "description": "Weex webpack building solution for easywebpack",
+  "version": "3.5.0",
+  "description": "基于 easywebpack 的 Weex Native 和 Weex Web 打包构建解决方案",
   "keywords": [
     "webpack",
     "easywebpack",
@@ -9,7 +9,7 @@
     "weex"
   ],
   "dependencies": {
-    "easywebpack": "^3.1.1",
+    "easywebpack": "^3.5.0",
     "vue": "^2.4.2",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^13.0.4",
@@ -22,11 +22,29 @@
     "weex-vue-render": "^0.12.8"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "chai": "^4.0.0",
     "cross-env": "^5.0.1",
+    "directory-named-webpack-plugin": "^2.3.0",
     "eslint": "^4.6.1",
     "eslint-config-eslint": "^4.0.0",
-    "mocha": "^3.4.2"
+    "eslint-loader": "^1.9.0",
+    "html-webpack-plugin": "^2.30.1",
+    "imagemin-webpack-plugin": "^1.5.2",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "mocha": "^3.4.2",
+    "node-sass": "^4.7.2",
+    "npm-install-webpack-plugin": "^4.0.5",
+    "postcss-loader": "^2.0.9",
+    "progress-bar-webpack-plugin": "^1.10.0",
+    "sass-loader": "^6.0.6",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
   },
   "engines": {
     "node": ">=6.0.0"
