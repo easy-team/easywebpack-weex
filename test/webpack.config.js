@@ -2,6 +2,7 @@
 const path = require('path');
 module.exports = {
   framework: 'weex',
+  type: 'weex',
   env: process.env.BUILD_ENV,
   entry: {
     include: 'test/web/page',
@@ -14,12 +15,6 @@ module.exports = {
     component: 'test/web/component',
     framework: 'test/web/framework',
     store: 'test/web/store'
-  },
-  install: {
-    check: true
-  },
-  plugins: {
-    npm: true
   },
   onWeb() {
     this.addEntry('common', [path.join(this.config.baseDir, 'test/web/framework/weex/web.js')]);

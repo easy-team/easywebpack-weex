@@ -26,110 +26,66 @@
 ## 安装
 
 ```bash
-$ npm i easywebpack-weex --save
+$ npm i easywebpack-weex --save-dev
 ```
 
 ## 使用
 
-### 公共配置 `base.js`
-
 ```js
-'use strict';
-const path = require('path');
-const WeexWebpack = require('easywebpack-weex');
-const merge = WeexWebpack.merge;
-const baseDir = path.join(__dirname, '../../../');
-const webpackConfig = {
+const weex = require('easywebpack-weex');
+// 获取 webpack weex 配置
+const webpackConfig = weex.getWeexWebpackConfig({
+  env: process.env.BUILD_ENV, // 支持 dev，test，local 模式
   entry: {
-   include: 'page',
-   exclude: ['page/test'],
-   template: 'view/layout.html'
-  } 
-};
-const WebpackBaseBuilder = WebpackBuilder => class extends WebpackBuilder {
-  constructor(config) {
-    super(merge(webpackConfig, config));
-    this.setAlias('app', 'test/web/framework/vue/app');
-    this.setAlias('component', 'test/web/component');
+    index: 'src/app.js'
   }
-};
-module.exports = WebpackBaseBuilder;
+});
+
+// 获取 webpack web 配置
+const webpackConfig = weex.getWeexWebpackConfig({
+  entry: {
+    index: 'src/app.js'
+  }
+});
+
+//  获取 webpack weex 和 web 配置
+const webpackConfig = weex.getWebpackConfig({
+  entry: {
+    index: 'src/app.js'
+  }
+});
 ```
 
-### Weex Native 构建配置 `weex.js`
 
-```js
-'use strict';
-const WeexWebpack = require('easywebpack-weex');
-const WebpackWeexBuilder = WeexWebpack.WebpackWeexBuilder;
-const WebpackBaseBuilder = require('../base');
-class WeexBuilder extends WebpackBaseBuilder(WebpackWeexBuilder) {
-}
-module.exports = new WeexBuilder().create();
-```
+## 开发构建
 
-### Weex Web 构建配置 `web.js`
-
-```js
-'use strict';
-const WeexWebpack = require('easywebpack-weex');
-const WebpackWebBuilder = WeexWebpack.WebpackWebBuilder;
-const WebpackBaseBuilder = require('../base');
-class WeexWebBuilder extends WebpackBaseBuilder(WebpackWebBuilder) {
-}
-module.exports = new WeexWebBuilder().create();
-```
-
-### 构建入口 `build.js`
-
-```js
-const WeexWebpack = require('easywebpack-weex');
-const weexConfig = require('./weex');
-const webConffig = require('./web');
-const config = [weexConfig, webConffig];
-
-if (process.env.NODE_SERVER) {
-  // development mode: webpack building and start webpack hot server
-  WeexWebpack.server(config);
-} else {
-  // build file to disk
-  WeexWebpack.build(config);
-}
-```
-
-### 命令行运行
-
-- package.json 添加脚本配置
-
-```js
-// ${app_root}/package.json
-{
-  "scripts": {
-    "build": "cross-env NODE_ENV=production node test/build",
-    "build-dev": "cross-env NODE_ENV=development node test/build",
-    "build-weex": "BUILD_ENV=weex npm run build",
-    "build-web": "BUILD_ENV=web npm run build",
-    "build-weex-dev": "BUILD_ENV=weex npm run build-dev",
-    "build-web-dev": "BUILD_ENV=web npm run build-dev",
-    "start" : "cross-env NODE_SERVER=true NODE_ENV=development node test/build"
-   }
-}
-```
-
-- 命令行运行
+- 使用 webpack-cli 开发构建服务
 
 ```bash
-npm start
+webpack --config webpack.config.js
 ```
 
+-  使用 easywebpack 内置开发构建服务
+
+
+```js
+const weex = require('easywebpack-weex');
+if (process.env.NODE_ENV === 'development') {
+  // development mode: webpack building and start webpack hot server
+  weex.server(webpackConfig);
+} else {
+  // build file to disk
+  weex.build(webpackConfig);
+}
+```
 
 ## 工程骨架
 
-[easywebpack-weex-boilerplate](https://github.com/hubcarl/easywebpack-weex-boilerplate) Weex构建项目骨架
+[easywebpack-weex-boilerplate](https://github.com/easy-team/easywebpack-weex-boilerplate) Weex构建项目骨架
 
-![webpack-weex-compile](https://github.com/hubcarl/easywebpack-weex/blob/master/doc/images/webpack-weex-compile.png)
+![webpack-weex-compile](https://github.com/easy-team/easywebpack-weex/blob/master/doc/images/webpack-weex-compile.png)
 
-![webpack-weex-debug](https://github.com/hubcarl/easywebpack-weex/blob/master/doc/images/webpack-weex-debug.png)
+![webpack-weex-debug](https://github.com/easy-team/easywebpack-weex/blob/master/doc/images/webpack-weex-debug.png)
 
 
 ## License

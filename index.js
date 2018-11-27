@@ -8,3 +8,12 @@ Object.assign(exports, EasyWebpack);
 exports.getWebpackConfig = config => {
   return EasyWebpack.WebpackBuilder.getWebpackConfig(config, [exports.WebpackWebBuilder, exports.WebpackWeexBuilder]);
 };
+
+exports.getWeexWebpackConfig = config => {
+  return EasyWebpack.WebpackBuilder.getWebpackConfig(config, [exports.WebpackWeexBuilder]);
+};
+
+
+exports.getWebWebpackConfig = config => {
+  return EasyWebpack.WebpackBuilder.getWebpackConfig(config, [exports.WebpackWebBuilder]);
+};

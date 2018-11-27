@@ -18,6 +18,7 @@
     "newline-after-var": "off",
     "no-invalid-this": "off",
     "no-unused-vars": "off",
+    "arrow-body-style": "off",
     "quotes": [
       "error",
       "single"
