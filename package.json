@@ -1,6 +1,6 @@
 {
   "name": "easywebpack-weex",
-  "version": "3.5.1",
+  "version": "3.6.0",
   "description": "基于 easywebpack 的 Weex Native 和 Weex Web 打包构建解决方案",
   "keywords": [
     "webpack",
