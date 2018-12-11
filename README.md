@@ -42,7 +42,7 @@ const webpackConfig = weex.getWeexWebpackConfig({
 });
 
 // 获取 webpack web 配置
-const webpackConfig = weex.getWeexWebpackConfig({
+const webpackConfig = weex.getWebWebpackConfig({
   entry: {
     index: 'src/app.js'
   }
